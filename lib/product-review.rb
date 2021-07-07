@@ -1,13 +1,17 @@
 class Product 
 
-  def parse(file_name) 
-    file_data = File.read(file_name).split
-    if (file_data)
-      return (file_data)
-    else
-      return('you have nothing here')
-    end
+  def initialize(file_name)
+    @file_name=file_name
   end
 
+  def parse() 
+    File.open(@file_name).each do |line|
+      puts line 
+    end
+  end 
+
+  def sort()
+    
+  end
 end
 
