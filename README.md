@@ -1,3 +1,7 @@
+## How To Run 
+
+Clone this repository to a directory of your choice. In your terminal or console, navigate into the directory where you cloned the project. Run the application by entering "ruby app.rb" into the command line. You will be promted to enter a file to parse, and should enter "sample-input.txt".
+
 ## The Problem
 
 We want you to create a command-line application that will evaluate whether a
