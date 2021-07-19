@@ -1,12 +1,17 @@
 require('rspec')
 require('product-review.rb')
-require('sample-input.txt')
 
 describe ('product') do 
-
-  it('returns true if the file data has contents') do 
-    new_file = Product.new()
-    expect(new_file.parse(sample-input.txt)).to_eq('you have nothing here')
+  it ('creates a new set of product data') do 
+    new_data=Product.new('sample-input.txt')
+    expect(new_data).not_to(be(nil))
   end
+
+  # it('pushes all approve items to an array') do 
+
+    
+  #   new_data = Product.new(sample-input.txt)
+  #   expect(new_data.sort_approve().length.to_eq(6))
+  # end
 
 end

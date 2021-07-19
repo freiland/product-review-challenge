@@ -10,19 +10,30 @@ class Product
     end
   end 
 
-  def sort_items()
+  # this method moves all lines with approve into an array
+  def sort_approve()
     approve=[]
-    reject=[]
+    
     File.open(@file_name).each do |line|
       if line.match(/reject/)
         item = line.scan(/(?<=\,)(.*?)(?=\- )/)
         reject.push(item)
-      else 
-        item = line.scan(/(?<=\,)(.*?)(?=\- )/)
-        approve.push(item)
-
       end
     end 
+    return approve 
+  end
+
+  # this method moves all items with reject into an array 
+  def sort_reject()
+    reject=[]
+    File.open(@file_name).each do |line|
+      item = line.scan(/(?<=\,)(.*?)(?=\- )/)
+      reject.push(item)
+    end
+  end
+
+
+  def other_methods()
       flat_approve = approve.flatten.uniq.sort
       flat_reject = reject.flatten.uniq.sort
       print 'REJECT'
@@ -40,7 +51,8 @@ class Product
         print e 
         print "\n"
       end 
-  end
+    end
+  
 
 end
 
