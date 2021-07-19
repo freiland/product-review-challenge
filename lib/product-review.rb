@@ -41,10 +41,14 @@ class Product
     
   end
 
-  def remove_reject_duplicates()
-    flat_reject = reject.flatten.uniq.sort
+  def remove_reject_duplicates(array)
+    return array.flatten.uniq.sort
   end
-      
+
+
+  def unique_approve(array_one, array_two)
+    return unique_approve = array_one - array_two
+  end
       # new_array=flat_approve-flat_reject
       # print 'APPROVE'
       # print "\n"
