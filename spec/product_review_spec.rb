@@ -7,11 +7,11 @@ describe ('product') do
     expect(new_data).not_to(be(nil))
   end
 
-  # it('pushes all approve items to an array') do 
+  it('pushes all approve items to an array') do 
 
     
-  #   new_data = Product.new(sample-input.txt)
-  #   expect(new_data.sort_approve().length.to_eq(6))
-  # end
+    new_data = Product.new('sample-input.txt')
+    expect(new_data.sort_approve().length).to(eq(6))
+  end
 
 end

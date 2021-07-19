@@ -15,9 +15,9 @@ class Product
     approve=[]
     
     File.open(@file_name).each do |line|
-      if line.match(/reject/)
+      if line.match(/approve/)
         item = line.scan(/(?<=\,)(.*?)(?=\- )/)
-        reject.push(item)
+        approve.push(item)
       end
     end 
     return approve 
