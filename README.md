@@ -1,7 +1,7 @@
 ## Setup Instructions
 
   #### Installation requirements
-    * Install Ruby [here] (https://www.ruby-lang.org/en/documentation/installation) .
+    * Install Ruby [here](https://www.ruby-lang.org/en/documentation/installation).
 
   #### Clone Repository and Install Bundler
 
