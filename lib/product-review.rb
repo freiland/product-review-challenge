@@ -8,7 +8,6 @@ class Product
   # this method moves all items with approve into an array and uses regular expressions to target each item in the text line
   def sort_approve()
     approve=[]
-    
     File.open(@file_name).each do |line|
       if line.match(/approve/)
         item = line.scan(/(?<=\,)(.*?)(?=\- )/)

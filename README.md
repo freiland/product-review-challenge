@@ -1,4 +1,19 @@
-## How To Run 
+## Setup Instructions
+  #### Installation requirements
+    * Install Ruby [here](https://www.ruby-lang.org/en/documentation/installation/) if it is not installed on your machine.
+
+  #### Clone Repository and Install Bundler
+
+    * Navigate to the directory where you would like to store this repository.
+    * Run `git clone` command in terminal/command line with this repositorys URL included.
+    * Run `gem install bundler` to install Bundler to manage all gems for this repository.
+    * Run `bundle` or `bundle install` in your command line to download all dependencies.
+
+  #### Running Program from the Command Line
+    * Navigate to the directory where you cloned this repository
+    * Run the application by entering `ruby app.rb` into your command line
+    * You will be promted to enter a file to parse, and should enter `sample-input.txt`
+    * To run the test suite from the command line enter `rspec`
 
 Clone this repository to a directory of your choice. In your terminal or console, navigate into the directory where you cloned the project. Run the application by entering "ruby app.rb" into the command line. You will be promted to enter a file to parse, and should enter "sample-input.txt". To run the test suite, type 'rspec' into the command line. 
 
