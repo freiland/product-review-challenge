@@ -2,6 +2,7 @@ require('rspec')
 require('product-review.rb')
 
 describe ('product') do 
+  
   it ('creates a new set of product data') do 
     new_data=Product.new('sample-input.txt')
     expect(new_data).not_to(be(nil))
@@ -37,9 +38,4 @@ describe ('product') do
     remove_duplicate_reject=new_data.remove_reject_duplicates(new_reject_array)
     expect(new_data.unique_approve(remove_duplicate_approve, remove_duplicate_reject)).to(eq([' holographic t-shirt ', ' keychain ']))
   end
-
-
-
-
-
 end

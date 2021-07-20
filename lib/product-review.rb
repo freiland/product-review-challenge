@@ -4,13 +4,8 @@ class Product
     @file_name=file_name
   end
 
-  def parse() 
-    File.open(@file_name).each do |line|
-      puts line 
-    end
-  end 
 
-  # this method moves all lines with approve into an array
+  # this method moves all items with approve into an array and uses regular expressions to target each item in the text line
   def sort_approve()
     approve=[]
     
@@ -23,7 +18,7 @@ class Product
     return approve 
   end
 
-  # this method moves all items with reject into an array 
+  # this method moves all items with reject into an array and uses regular expressions to target the items 
   def sort_reject()
     reject=[]
     File.open(@file_name).each do |line|
@@ -35,29 +30,34 @@ class Product
   return reject 
   end
 
-
+  # this method removes duplicates and sorts the approve array
   def remove_approve_duplicates(array)
      return array.flatten.uniq.sort
-    
   end
 
+  #this method removes duplicates and sorts the reject array
   def remove_reject_duplicates(array)
     return array.flatten.uniq.sort
   end
 
-
+  # subtracts the reject array from the approve array, removing any rejected items from the approve array
   def unique_approve(array_one, array_two)
     return unique_approve = array_one - array_two
   end
-      # new_array=flat_approve-flat_reject
-      # print 'APPROVE'
-      # print "\n"
-      # new_array.each do |e|
-      #   print e 
-      #   print "\n"
-      # end 
-    
   
-
+  def print_results(array_one, array_two)
+    print 'APPROVE'
+    print "\n"
+    array_one.each do |e|
+      print e 
+      print "\n"
+    end
+    print 'REJECT'
+    print "\n"
+    array_two.each do |e|
+      print e
+      print "\n"
+    end
+  end
 end
 

@@ -1,6 +1,6 @@
 ## How To Run 
 
-Clone this repository to a directory of your choice. In your terminal or console, navigate into the directory where you cloned the project. Run the application by entering "ruby app.rb" into the command line. You will be promted to enter a file to parse, and should enter "sample-input.txt".
+Clone this repository to a directory of your choice. In your terminal or console, navigate into the directory where you cloned the project. Run the application by entering "ruby app.rb" into the command line. You will be promted to enter a file to parse, and should enter "sample-input.txt". To run the test suite, type 'rspec' into the command line. 
 
 ## The Problem
 
